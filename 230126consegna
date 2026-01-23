@@ -1,0 +1,48 @@
+/*calcolo di aree.c
+mi scuso perche' sto copiando tutto...
+i concetti sono abbastanza chiari , ci vuole un po' di applicazione e analisi in piu per me */
+/*piu' che altro sto facendo pratica di digitazione dato che ho
+la tastiera in finlandese.
+sicuramente questo mi aiutera' a fare capire meglio dove sono 
+i caratteri etc.etc.*/
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main (void)
+{
+    float d; /*numero inserito*/
+    float aq, ac, at; /*area quadrato , cerchio e triangolo*/
+    float r; /*raggio del cerchio*/
+    
+    /*Con printf andiamo a stampare cosa eseguira' il programma */
+    printf("calcolo di aree\n\n");
+    
+    /*leggi il numero*/
+    printf("immetti il valore di D: ");
+    scanf("%f", &d);
+    
+    /*calcola area del quadrato di lato d*/
+    aq = d * d;
+    
+    /*calcolo area cerchio di diametro d*/
+    /*calcola il raggio del cerchio*/
+    r = d / 2;
+    
+    /*calcola area del cerchio*/
+    
+    ac = 3,14 * (r * r);
+    
+    /*calcola l'area del triangolo equilatero di lato d*/
+    at = (sqrt(3) / 4) * (d * d);
+    
+    /*stampa il risultato delle precedenti operazioni svolte*/ 
+    printf("\n");
+    printf("le aree calcolate sono:\n");
+    printf("area del quadrato di lato %f = %f\n", d, aq);
+    printf("area del cerchio di diametro %f = %f\n", d, ac);
+    printf("area del triangolo equilatero di lato %f = %f\n", d, at);
+    
+    exit(0);
+}
+/* ho usato il 3,14 in quanto non mi faceva inserire la definizione di M_PI in math.h*/
